@@ -1,0 +1,14 @@
+#cloud-config
+hostname: ${name}
+users:
+  - default
+  - name: ${vm_user}
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    ssh_authorized_keys:
+      - ${vm_ssh_pub}
+packages:
+  - sudo
+runcmd:
+  - [systemctl, stop, iptables.service]
+  - [systemctl, disable, iptables.service]

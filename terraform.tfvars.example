@@ -1,0 +1,23 @@
+vsphere_server   = "vcenter.domain.com"
+vsphere_user     = "administrator@vsphere.local"
+vsphere_password = "password"
+datacenter       = "dc"
+datastore        = "host-ds"
+cluster          = "Test Cluster"
+host             = "host.domain.com"
+network_name     = "VM Network"
+ova_path         = "photon-ova_uefi-4.0-c001795b80.ova"
+vm_name          = "photon-vm"
+vm_user          = "user"
+vm_ssh_pub       = "ssh-ed25519 AAAA.... user@host"
+ssh_key_file     = "~/.ssh/id_ed25519"
+dns              = "1.1.1.1"
+vm_config = [{
+  network = "VM Network"
+  address = "192.168.1.20/24"
+  gateway = "192.168.1.1"
+  }, {
+  network = "VM Network"
+  address = "192.168.1.21/24"
+  gateway = "192.168.1.1"
+}]

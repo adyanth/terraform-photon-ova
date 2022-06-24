@@ -1,0 +1,6 @@
+.terraform/
+cloud-init-workdir/
+terraform.tfstate*
+*.tfvars
+*.ova
+kubeconfig

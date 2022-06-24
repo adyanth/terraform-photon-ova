@@ -1,0 +1,9 @@
+version: 2
+ethernets:
+  eth0:
+    addresses:
+      - ${address}
+    gateway4: ${gateway}
+    nameservers:
+      addresses:
+        - ${dns}
