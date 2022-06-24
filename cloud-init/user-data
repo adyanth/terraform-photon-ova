@@ -10,5 +10,6 @@ users:
 packages:
   - sudo
 runcmd:
+  # Disable iptables firewall
   - [systemctl, stop, iptables.service]
   - [systemctl, disable, iptables.service]
