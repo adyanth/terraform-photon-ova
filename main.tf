@@ -86,6 +86,7 @@ resource "null_resource" "seed-iso" {
       mkisofs -o cloud-init-workdir/seed-${count.index}.iso -volid cidata -joliet -rock cloud-init-workdir/{meta-data,user-data,network-config}
       rm cloud-init-workdir/{meta-data,user-data,network-config}
     COMMAND
+    interpreter = ["bash", "-c"]
   }
 
   provisioner "local-exec" {
